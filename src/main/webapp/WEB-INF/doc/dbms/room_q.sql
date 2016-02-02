@@ -34,6 +34,18 @@ VALUES(2, '찐감자',4,6,한실,커플,TV,160000,230000,230000,'spring.jpg','summer.jp
 
 INSERT INTO room(roomno,room_name,person_min,person_max,structure,room_type,equipment,money1,
 										money2,money3,photo1,photo2,photo3,photo4,photo5)
-VALUES(3, '생감자',6,8,복층,단체,냉장고,70000,100000,100000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
+VALUES(3, '생감자',6,8,복층,단체,냉장고,260000,260000,260000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
 
 SELECT * FROM blog;
+
+
+
+
+
+
+
+
+
+
+
+
