@@ -4,7 +4,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class RoomVO {
  /*CREATE TABLE room(
-CREATE TABLE room(
     roomno                           MEDIUMINT    NOT NULL  PRIMARY KEY AUTO_INCREMENT COMMENT '객실번호',
     room_name                       VARCHAR(20)     NOT NULL COMMENT '객실명',
     person_min                          MEDIUMINT     NOT NULL COMMENT '인원기준',
@@ -15,11 +14,12 @@ CREATE TABLE room(
     money1                          MEDIUMINT     NOT NULL  COMMENT 'money1',
     money2                          MEDIUMINT     NOT NULL COMMENT 'money2',
     money3                          MEDIUMINT     NOT NULL  COMMENT 'money3',
-    file                          VARCHAR(200)      NULL  COMMENT  'file',
-    file1                         VARCHAR(200)      NULL  COMMENT  'file1',
-    file2                         VARCHAR(200)      NULL  COMMENT  'file2',
-    file3                         VARCHAR(200)      NULL  COMMENT  'file3',
-    file4                         VARCHAR(200)      NULL  COMMENT  'file4'
+    file                          VARCHAR(20)     NULL  COMMENT  'file',
+    file1                         VARCHAR(20)     NULL  COMMENT  'file1',
+    file2                         VARCHAR(20)     NULL  COMMENT  'file2',
+    file3                         VARCHAR(20)     NULL  COMMENT  'file3',
+    file4                         VARCHAR(20)     NULL  COMMENT  'file4',
+    file5                         VARCHAR(20)     NULL  COMMENT  'file5'
 ) COMMENT='상품정보';
 */
 
@@ -38,6 +38,7 @@ CREATE TABLE room(
   private String  file2;
   private String  file3;
   private String  file4;
+  private String  file5;
   
 
   /* Framework에서 자동 주입되는 Thumb 파일 객체 */
@@ -47,10 +48,23 @@ CREATE TABLE room(
   private MultipartFile file2MF;
   private MultipartFile file3MF;
   private MultipartFile file4MF;
+  private MultipartFile file5MF;
   
   
   public MultipartFile getFile2MF() {
     return file2MF;
+  }
+  public String getFile5() {
+    return file5;
+  }
+  public void setFile5(String file5) {
+    this.file5 = file5;
+  }
+  public MultipartFile getFile5MF() {
+    return file5MF;
+  }
+  public void setFile5MF(MultipartFile file5mf) {
+    file5MF = file5mf;
   }
   public void setFile2MF(MultipartFile file2mf) {
     file2MF = file2mf;

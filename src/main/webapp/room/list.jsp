@@ -87,7 +87,7 @@ $(function(){
             <td class="td"><%=vo.getMoney1() %></td>
             <td class="td"><%=vo.getMoney3() %></td>
 
-            <td class="td"><%=Tool.textLength(10, vo.getFile()) %></td>
+            <td class="td"><%=Tool.textLength(20, vo.getFile()) %></td>
      
    
             <td class="td">

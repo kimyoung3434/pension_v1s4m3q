@@ -28,7 +28,7 @@ public class RoomCont {
     System.out.println("--> RoomCont created.");
   }
   
-  //내용/파일 등록
+  //내용,파일 등록
   @RequestMapping(value="/room/create.do", method=RequestMethod.GET)
   public ModelAndView create(RoomVO roomVO){
     // System.out.println("--> create() GET called.");
@@ -99,6 +99,15 @@ public class RoomCont {
       if (file4MF.getSize() > 0){
         file4 = Upload.saveFileSpring(file4MF, absPath);
         roomVO.setFile4(file4); // 전송된 파일명 저장
+      }
+    }
+    
+    String file5 = "";
+    MultipartFile file5MF = roomVO.getFile5MF();
+    if (file5MF != null){
+      if (file5MF.getSize() > 0){
+        file5 = Upload.saveFileSpring(file5MF, absPath);
+        roomVO.setFile5(file5); // 전송된 파일명 저장
       }
     }
     

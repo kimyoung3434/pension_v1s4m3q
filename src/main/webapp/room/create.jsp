@@ -46,7 +46,7 @@ $(function(){
       </li>
        <li>
         <label for='person_max'>최대인원</label>
-        <input type='number' name='person_max' id='person_max' min='0' max='3' value='4' required="required">
+        <input type='number' name='person_max' id='person_max' min='0' max='8' value='3' required="required">
       </li>
             <li>
         <label for='structure'>구조</label>
@@ -87,6 +87,10 @@ $(function(){
        <li>
         <label class='label' for='file4MF'>업로드 파일4</label>
         <input type="file" name='file4MF' id='file4MF' >
+      </li>
+       <li>
+        <label class='label' for='file5MF'>업로드 파일5</label>
+        <input type="file" name='file5MF' id='file5MF' >
       </li>
       <li>
         <label class='label' for='roomno'>카테고리 번호</label>
