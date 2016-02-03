@@ -1,6 +1,8 @@
-package dev.mvc.pension;
+package dev.mvc.room;
 
-public class PensionVO {
+import org.springframework.web.multipart.MultipartFile;
+
+public class RoomVO {
  /*CREATE TABLE room(
     roomno                           MEDIUMINT    NOT NULL  PRIMARY KEY AUTO_INCREMENT COMMENT '°´½Ç¹øÈ£',
     room_name                       VARCHAR(20)     NOT NULL COMMENT '°´½Ç¸í',

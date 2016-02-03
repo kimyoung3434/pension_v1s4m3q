@@ -29,7 +29,8 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
     <property name="typeAliasesPackage" 
                   value="dev.mvc.code,
                             dev.mvc.blogcategory,
-                            dev.mvc.blog" />
+                            dev.mvc.blog,
+                            dev.mvc.room" />
     <property name="mapperLocations" value="classpath:dev/mvc/**/*.xml" />
   </bean>
   
