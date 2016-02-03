@@ -24,28 +24,37 @@ CREATE TABLE room(
 
 2. 등록
 
-INSERT INTO room(roomno, room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5)
-VALUES(1, '삶은감자',2,2,'원룸형','가족','침대',70000,100000,100000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
-INSERT INTO room(roomno,room_name,person_min,person_max,structure,room_type,equipment,money1
-										,money2,money3,photo1,photo2,photo3,photo4,photo5)
-VALUES(2, '찐감자',4,6,'한실','커플',TV,160000,230000,230000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
+INSERT INTO room(room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5)
+VALUES('삶은감자',2,2,'원룸형/침대','가족','침대',70000,100000,100000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
 
-INSERT INTO room(roomno,room_name,person_min,person_max,structure,room_type,equipment,money1
-										,money2,money3,photo1,photo2,photo3,photo4,photo5)
-VALUES(3, '생감자',6,8,'복층,단체','냉장고',260000,260000,260000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
+INSERT INTO room(room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5)
+VALUES('생감자',4,6,'원룸형/한실','커플','TV',100000,140000,140000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
 
+INSERT INTO room(room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5)
+VALUES('왕감자',6,8,'원룸형/복층','단체','냉장고',120000,120000,160000,'spring.jpg','summer.jpg','autumn.jpg','winter.jpg','rain.jpg');
 
-SELECT * FROM blog;
+SELECT * FROM room;
 
 3.목록
 
-SELECT 
+SELECT roomno, room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5
 FROM room
 ORDER BY roomno DESC;
 
+4) 조회
+SELECT roomno, room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5
+FROM room
+WHERE roomno=2;
+
+5) 수정
+UPDATE room
+SET room_name='', person_min='2', person_max='2', structure='', room_type='',equipment='',money1='100000',money2='120000',money3='120000',photo1=''
+WHERE roomno=2;
 
 
-
+6) 삭제
+DELETE FROM room
+WHERE roomno=1;
 
 
 
