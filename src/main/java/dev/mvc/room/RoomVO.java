@@ -4,6 +4,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class RoomVO {
  /*CREATE TABLE room(
+CREATE TABLE room(
     roomno                           MEDIUMINT    NOT NULL  PRIMARY KEY AUTO_INCREMENT COMMENT '객실번호',
     room_name                       VARCHAR(20)     NOT NULL COMMENT '객실명',
     person_min                          MEDIUMINT     NOT NULL COMMENT '인원기준',
@@ -14,11 +15,11 @@ public class RoomVO {
     money1                          MEDIUMINT     NOT NULL  COMMENT 'money1',
     money2                          MEDIUMINT     NOT NULL COMMENT 'money2',
     money3                          MEDIUMINT     NOT NULL  COMMENT 'money3',
-    photo1                          VARCHAR(200)      NULL  COMMENT  'photo1',
-    photo2                          VARCHAR(200)      NULL  COMMENT  'photo2',
-    photo3                          VARCHAR(200)      NULL  COMMENT  'photo3',
-    photo4                          VARCHAR(200)      NULL  COMMENT  'photo4',
-    photo5                          VARCHAR(200)      NULL  COMMENT  'photo5'
+    file                          VARCHAR(200)      NULL  COMMENT  'file',
+    file1                         VARCHAR(200)      NULL  COMMENT  'file1',
+    file2                         VARCHAR(200)      NULL  COMMENT  'file2',
+    file3                         VARCHAR(200)      NULL  COMMENT  'file3',
+    file4                         VARCHAR(200)      NULL  COMMENT  'file4'
 ) COMMENT='상품정보';
 */
 
@@ -32,13 +33,52 @@ public class RoomVO {
   private int  money1;
   private int  money2;
   private int  money3;
-  private String  photo1;
-  private String  photo2;
-  private String  photo3;
-  private String  photo4;
-  private String  photo5;
+  private String  file;
+  private String  file1;
+  private String  file2;
+  private String  file3;
+  private String  file4;
+  
+
+  /* Framework에서 자동 주입되는 Thumb 파일 객체 */
+  private MultipartFile fileMF;
+  /* Framework에서 자동 주입되는 파일 객체 */  
+  private MultipartFile file1MF;
+  private MultipartFile file2MF;
+  private MultipartFile file3MF;
+  private MultipartFile file4MF;
   
   
+  public MultipartFile getFile2MF() {
+    return file2MF;
+  }
+  public void setFile2MF(MultipartFile file2mf) {
+    file2MF = file2mf;
+  }
+  public MultipartFile getFile3MF() {
+    return file3MF;
+  }
+  public void setFile3MF(MultipartFile file3mf) {
+    file3MF = file3mf;
+  }
+  public MultipartFile getFile4MF() {
+    return file4MF;
+  }
+  public void setFile4MF(MultipartFile file4mf) {
+    file4MF = file4mf;
+  }
+  public MultipartFile getFileMF() {
+    return fileMF;
+  }
+  public void setFileMF(MultipartFile fileMF) {
+    this.fileMF = fileMF;
+  }
+  public MultipartFile getFile1MF() {
+    return file1MF;
+  }
+  public void setFile1MF(MultipartFile file1mf) {
+    file1MF = file1mf;
+  }
   public int getRoomno() {
     return roomno;
   }
@@ -99,35 +139,35 @@ public class RoomVO {
   public void setMoney3(int money3) {
     this.money3 = money3;
   }
-  public String getPhoto1() {
-    return photo1;
+  public String getFile() {
+    return file;
   }
-  public void setPhoto1(String photo1) {
-    this.photo1 = photo1;
+  public void setFile(String file) {
+    this.file = file;
   }
-  public String getPhoto2() {
-    return photo2;
+  public String getFile1() {
+    return file1;
   }
-  public void setPhoto2(String photo2) {
-    this.photo2 = photo2;
+  public void setFile1(String file1) {
+    this.file1 = file1;
   }
-  public String getPhoto3() {
-    return photo3;
+  public String getFile2() {
+    return file2;
   }
-  public void setPhoto3(String photo3) {
-    this.photo3 = photo3;
+  public void setFile2(String file2) {
+    this.file2 = file2;
   }
-  public String getPhoto4() {
-    return photo4;
+  public String getFile3() {
+    return file3;
   }
-  public void setPhoto4(String photo4) {
-    this.photo4 = photo4;
+  public void setFile3(String file3) {
+    this.file3 = file3;
   }
-  public String getPhoto5() {
-    return photo5;
+  public String getFile4() {
+    return file4;
   }
-  public void setPhoto5(String photo5) {
-    this.photo5 = photo5;
+  public void setFile4(String file4) {
+    this.file4 = file4;
   }
   
 }

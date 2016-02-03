@@ -41,11 +41,32 @@ $(function(){
            enctype="multipart/form-data">
     <ul>
       <li>
-        <label for='title'>제목</label>
-        <input type='text' name='title' id='title' size='70' value='봄' required="required">
+        <label for='room_name'>객실명</label>
+        <input type='text' name='room_name' id='room_name' size='15' value='봄' required="required">
+      </li>
+       <li>
+        <label for='person_max'>최대인원</label>
+        <input type='number' name='person_max' id='person_max' min='0' max='3' value='4' required="required">
+      </li>
+            <li>
+        <label for='structure'>구조</label>
+        <input type='text' name='structure' id='structure' size='20' value='봄' required="required">
+      </li>
+       <li>
+        <label for='room_type'>타입</label>
+        <input type='text' name='room_type' id='room_type' size='10' value='봄' required="required">
       </li>
       <li>
-        <textarea name='content' id='content'  rows='7' style='width: 100%;'>추위끝</textarea>
+      <label for='equipment'>장비</label>
+        <textarea name='equipment' id='equipment'  rows='4' style='width: 100%;'></textarea>
+      </li>
+        <li>
+        <label for='money1'>비수기</label>
+        <input type='number' name='money1' id='money1' size='10' value='20000' required="required">
+      </li>
+        <li>
+        <label for='money3'>성수기</label>
+        <input type='number' name='money3' id='money3' size='10' value='40000' required="required">
       </li>
       <li>
         <label class='label' for='fileMF'>Thumb 파일</label>
@@ -62,6 +83,10 @@ $(function(){
             <li>
         <label class='label' for='file3MF'>업로드 파일3</label>
         <input type="file" name='file3MF' id='file3MF' >
+      </li>
+       <li>
+        <label class='label' for='file4MF'>업로드 파일4</label>
+        <input type="file" name='file4MF' id='file4MF' >
       </li>
       <li>
         <label class='label' for='roomno'>카테고리 번호</label>

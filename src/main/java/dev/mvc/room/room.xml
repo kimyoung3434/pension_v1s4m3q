@@ -5,8 +5,15 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="dev.mvc.room.RoomMapperInter">
   <insert id="create" parameterType="RoomVO">    
-    INSERT INTO room(room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,photo1,photo2,photo3,photo4,photo5)
-VALUES(#{room_name},2,2,#{structure},#{room_type},#{equipment},70000,100000,100000,#{photo1},#{photo2},#{photo3},#{photo4},#{photo5})
+    INSERT INTO room(room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,file,file1,file2,file3,file4)
+VALUES(#{room_name},2,2,#{structure},#{room_type},#{equipment},70000,100000,100000,#{file},#{file1},#{file2},#{file3},#{file4})
   </insert>
 
+  <!-- 모든 글 목록 -->
+  <select id="list" resultType="RoomVO">
+SELECT roomno, room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,file,file1,file2,file3,file4
+FROM room
+ORDER BY roomno DESC
+  </select> 
+  
 </mapper>

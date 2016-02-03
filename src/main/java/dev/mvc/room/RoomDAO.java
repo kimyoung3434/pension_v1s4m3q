@@ -1,5 +1,7 @@
 package dev.mvc.room;
  
+import java.util.ArrayList;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -22,6 +24,11 @@ public class RoomDAO implements RoomMapperInter{
   @Override
   public int create(RoomVO roomVO) {
     return mapper().create(roomVO);
+  }
+
+  @Override
+  public ArrayList<RoomVO> list() {
+    return mapper().list();
   }
   
 }
