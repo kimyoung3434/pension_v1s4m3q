@@ -16,4 +16,10 @@ FROM room
 ORDER BY roomno DESC
   </select> 
   
+   <select id="read" resultType="RoomVO" parameterType="int">
+SELECT roomno, room_name, person_min, person_max, structure, room_type,equipment,money1,money2,money3,file,file1,file2,file3,file4,file5
+   FROM room
+   WHERE roomno=#{roomno}
+  </select>
+  
 </mapper>

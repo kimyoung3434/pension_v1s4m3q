@@ -140,4 +140,18 @@ public class RoomCont {
     return mav;
   }
   
+  //Á¶È¸
+  @RequestMapping(value = "/room/read.do", method = RequestMethod.GET)
+  public ModelAndView read(int roomno, int blogcategoryno) {
+    ModelAndView mav = new ModelAndView();
+    mav.setViewName("/room/read");
+    mav.addObject("roomVO", roomDAO.read(roomno));
+    
+    RoomVO vo = roomDAO.read(roomno);
+    mav.addObject("title", vo.getRoomno());
+
+    return mav;
+  }
+  
+  
 }

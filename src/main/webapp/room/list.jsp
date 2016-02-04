@@ -79,7 +79,10 @@ $(function(){
           %>
           <tr>
             <td class="td"><%=roomno %></td>
-            <td class="td"><%=vo.getRoom_name() %></td>
+            <td class="td">
+              <a href="./read.do?roomno=<%=roomno %>"><%=Tool.textLength(10, vo.getRoom_name())%></a> 
+            </td>
+            <%-- <td class="td"><%=vo.getRoom_name() %></td> --%>
             <td class="td"><%=vo.getPerson_max() %></td>
             <td class="td"><%=vo.getStructure() %></td>
             <td class="td"><%=vo.getRoom_type() %></td>

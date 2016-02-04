@@ -30,5 +30,10 @@ public class RoomDAO implements RoomMapperInter{
   public ArrayList<RoomVO> list() {
     return mapper().list();
   }
+
+  @Override
+  public RoomVO read(int roomno) {
+    return mapper().read(roomno);
+  }
   
 }
