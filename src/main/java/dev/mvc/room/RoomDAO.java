@@ -35,5 +35,16 @@ public class RoomDAO implements RoomMapperInter{
   public RoomVO read(int roomno) {
     return mapper().read(roomno);
   }
+
+  @Override
+  public int update(RoomVO roomVO) {
+    return mapper().update(roomVO);
+
+  }
+
+  @Override
+  public int delete(int roomno) {
+    return mapper().delete(roomno);
+  }
   
 }

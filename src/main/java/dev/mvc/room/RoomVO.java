@@ -50,7 +50,51 @@ public class RoomVO {
   private MultipartFile file4MF;
   private MultipartFile file5MF;
   
+  private String oldfile;
+  private String oldfile1;
+  private String oldfile2;
+  private String oldfile3;
+  private String oldfile4;
+  private String oldfile5;
   
+  
+  
+  public String getOldfile() {
+    return oldfile;
+  }
+  public void setOldfile(String oldfile) {
+    this.oldfile = oldfile;
+  }
+  public String getOldfile1() {
+    return oldfile1;
+  }
+  public void setOldfile1(String oldfile1) {
+    this.oldfile1 = oldfile1;
+  }
+  public String getOldfile2() {
+    return oldfile2;
+  }
+  public void setOldfile2(String oldfile2) {
+    this.oldfile2 = oldfile2;
+  }
+  public String getOldfile3() {
+    return oldfile3;
+  }
+  public void setOldfile3(String oldfile3) {
+    this.oldfile3 = oldfile3;
+  }
+  public String getOldfile4() {
+    return oldfile4;
+  }
+  public void setOldfile4(String oldfile4) {
+    this.oldfile4 = oldfile4;
+  }
+  public String getOldfile5() {
+    return oldfile5;
+  }
+  public void setOldfile5(String oldfile5) {
+    this.oldfile5 = oldfile5;
+  }
   public MultipartFile getFile2MF() {
     return file2MF;
   }

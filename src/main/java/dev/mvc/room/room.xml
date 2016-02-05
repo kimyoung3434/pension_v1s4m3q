@@ -22,4 +22,15 @@ SELECT roomno, room_name, person_min, person_max, structure, room_type,equipment
    WHERE roomno=#{roomno}
   </select>
   
+    <update id="update" parameterType="RoomVO">
+    UPDATE room
+  SET room_name=#{room_name}, person_min=#{person_min}, person_max=#{person_max}, structure=#{structure}, room_type=#{room_type}, equipment=#{equipment},money1=#{money1},money2=#{money2},money3=#{money3},file=#{file},file1=#{file1},file2=#{file2},file3=#{file3},file4=#{file4},file5=#{file5}
+    WHERE roomno=#{roomno}
+  </update>
+  
+    <delete id="delete" parameterType="int">
+    DELETE FROM room
+    WHERE roomno=#{roomno}
+  </delete>
+  
 </mapper>

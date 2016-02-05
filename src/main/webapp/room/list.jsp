@@ -37,7 +37,7 @@ $(function(){
   <div class="content" style='width: 90%;'>
     <table class="table" style='width: 100%;'>
       <colgroup>
-        <col style="width: 5%;"></col>
+  
         <col style="width: 10%;"></col>
         <col style="width: 5%;"></col>
         <col style="width: 10%;"></col>
@@ -53,15 +53,15 @@ $(function(){
       <%-- table 컬럼 --%>
       <thead>
         <tr>
-          <th class="th">객실번호</th>
+         
           <th class="th">객실명</th>
           <th class="th">최대인원</th>
           <th class="th">구조</th>
           <th class="th">타입</th>
-          <th class="th">시설</th>
+          <th class="th">구비시설</th>
           <th class="th">비수기</th>
           <th class="th">성수기</th>
-          <th class="th">file</th>
+          <th class="th">사진</th>
     
       
           <th class="th">기타</th>
@@ -78,7 +78,7 @@ $(function(){
             int roomno = vo.getRoomno();
           %>
           <tr>
-            <td class="td"><%=roomno %></td>
+          <%--   <td class="td"><%=roomno %></td> --%>
             <td class="td">
               <a href="./read.do?roomno=<%=roomno %>"><%=Tool.textLength(10, vo.getRoom_name())%></a> 
             </td>
@@ -86,12 +86,16 @@ $(function(){
             <td class="td"><%=vo.getPerson_max() %></td>
             <td class="td"><%=vo.getStructure() %></td>
             <td class="td"><%=vo.getRoom_type() %></td>
-            <td class="td"><%=vo.getEquipment() %></td>
+            <td class="td">
+            <%=Tool.textLength(10, vo.getEquipment())%>
+            </td>
             <td class="td"><%=vo.getMoney1() %></td>
             <td class="td"><%=vo.getMoney3() %></td>
-
-            <td class="td"><%=Tool.textLength(20, vo.getFile()) %></td>
-     
+            <td class="td">
+            <label for="file" class="label"> </label>
+           <img src='./storage/<%=vo.getFile() %>' ><br>
+            </td>
+   
    
             <td class="td">
               <a href="./update.do?roomno=<%=roomno%>"><img src="./images/update.png" title="수정" /></a>

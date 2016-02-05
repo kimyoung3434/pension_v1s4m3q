@@ -9,8 +9,8 @@ public class ToolTest {
 //    
 //    Tool.imgResize(src, dest, 120, 80);
     
-    String upDir = "F:/hybrid2/Gallery/imgResize";
-    String src = "festval06.jpg";
+    String upDir = "C:/hybrid2/Gallery/imgResize";
+    String src = "Ç³°æ6.jpg";
     Tool.preview(upDir, src, 120, 80);
     
   }

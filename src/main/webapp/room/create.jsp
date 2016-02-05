@@ -54,7 +54,7 @@ $(function(){
       </li>
        <li>
         <label for='room_type'>타입</label>
-        <input type='text' name='room_type' id='room_type' size='10' value='봄' required="required">
+        <input type='text' name='room_type' id='room_type' size='20' value='봄' required="required">
       </li>
       <li>
       <label for='equipment'>장비</label>
@@ -92,12 +92,13 @@ $(function(){
         <label class='label' for='file5MF'>업로드 파일5</label>
         <input type="file" name='file5MF' id='file5MF' >
       </li>
-      <li>
+<%--<li>
         <label class='label' for='roomno'>카테고리 번호</label>
         <input type="text" name='roomno' id='roomno' value='<%=roomVO.getRoomno() %>'>
-      </li>
+      </li> --%>
       <li class='right'>
         <button type="submit">등록</button>
+        <button type="button" onclick="location.href='./list.do?roomno=<%=roomVO.getRoomno() %>'">목록</button>
       </li>         
     </ul>
 </FORM>

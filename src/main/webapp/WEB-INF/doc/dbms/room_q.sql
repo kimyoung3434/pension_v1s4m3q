@@ -49,7 +49,7 @@ WHERE roomno=2;
 
 5) ¼öÁ¤
 UPDATE room
-SET room_name='', person_min='2', person_max='2', structure='', room_type='',equipment='',money1='100000',money2='120000',money3='120000',file=''
+SET room_name='', person_min='2', person_max='2', structure='', room_type='',equipment='',money1='100000',money2='120000',money3='120000',file='',file1='',file2=''
 WHERE roomno=2;
 
 

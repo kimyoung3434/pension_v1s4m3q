@@ -33,7 +33,7 @@ RoomVO roomVO = (RoomVO)request.getAttribute("roomVO");
           </li>
           <li>
             <label for='person_max' class="label" style="width:150px;">최대인원 : </label>
-            <span><%=roomVO.getPerson_max() %></span>
+            <span><%=roomVO.getPerson_max() %>명</span>
           </li>
           <li>
             <label for="structure" class="label" style="width:150px;">구조 : </label>
@@ -44,56 +44,64 @@ RoomVO roomVO = (RoomVO)request.getAttribute("roomVO");
             <span><%=roomVO.getRoom_type()%></span>
           </li>
            <li>
-            <label for="equipment" class="label" style="width:150px;">시설 : </label>
+            <label for="equipment" class="label" style="width:150px;">구비시설 : </label>
             <span><%=roomVO.getEquipment()%></span>
           </li>
            <li>
             <label for="money1" class="label" style="width:150px;">비수기 : </label>
-            <span><%=roomVO.getMoney1()%></span>
+            <span><%=roomVO.getMoney1()%>원</span>
           </li>
            <li>
             <label for="money3" class="label" style="width:150px;">성수기 : </label>
-            <span><%=roomVO.getMoney3()%></span>
+            <span><%=roomVO.getMoney3()%>원</span>
           </li>
+          <br>
           <li>
-            <label for="file" class="label" style="width:150px;">Thumb 파일 : </label>
-            <%=roomVO.getFile() %><br>
+            <label for="file" class="label" style="width:150px;"> </label>
+            <img src='./storage/<%=roomVO.getFile() %>' ><br>
           </li>
+       
           <li>
-            <label for="file1" class="label" style="width:150px;">업로드 파일1: </label>
+            <label for="file1" class="label" style="width:150px;"> </label>
             <div>
-              <%=roomVO.getFile1() %><br>
+              <img src='./storage/<%=roomVO.getFile1() %>' ><br>
             </div>
           </li>
           <li>
-            <label for="file2" class="label" style="width:150px;">업로드 파일2: </label>
+            <label for="file2" class="label" style="width:150px;"> </label>
             <div>
-              <%=roomVO.getFile2() %><br>
+              <img src='./storage/<%=roomVO.getFile2() %>' ><br>
             </div>
           </li>
            <li>
-            <label for="file3" class="label" style="width:150px;">업로드 파일3: </label>
+            <label for="file3" class="label" style="width:150px;"> </label>
             <div>
-              <%=roomVO.getFile3() %><br>
+               <img src='./storage/<%=roomVO.getFile3() %>' ><br>
             </div>
           </li>
            <li>
-            <label for="file4" class="label" style="width:150px;">업로드 파일4: </label>
+            <label for="file4" class="label" style="width:150px;"> </label>
             <div>
-              <%=roomVO.getFile4() %><br>
+               <img src='./storage/<%=roomVO.getFile4() %>' ><br>
             </div>
           </li>
            <li>
-            <label for="file5" class="label" style="width:150px;">업로드 파일5: </label>
+            <label for="file5" class="label" style="width:150px;"> </label>
             <div>
-              <%=roomVO.getFile5() %><br>
+               <img src='./storage/<%=roomVO.getFile5() %>' ><br>
             </div>
-          </li>
+          </li> 
           
+          <li class='right'>
+           <button type="button" onclick="location.href='./list.do?roomno=<%=roomVO.getRoomno() %>'">목록</button>
+        <button type="submit">수정</button>
+        <button type="button" onclick="location.href='./delete.do?roomno=<%=roomVO.getRoomno() %>'">삭제</button>
+       
         </ul>
       </fieldset>
     </FORM>
   </DIV>
+
 
   <!-- -------------------------------------------- -->
   <jsp:include page="/menu/bottom.jsp" flush='false' />
